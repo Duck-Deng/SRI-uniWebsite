@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden !important;
+    width: 100vw;
+    /* touch-action: pan-y; */
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100vw;
+    height: auto;
+}
+
+section {
+    border-bottom: 2px solid rgba(0, 188, 212, 0.6);
+}
+
+section,
+#footer {
+    height: 100vh;
+    position: relative;
+    color: rgba(255, 255, 255, .8);
+    font-size: 10vh;
+    /* 文字阴影 */
+    /* text-shadow: 4px 4px rgb(46, 43, 43); */
+    /* 弹性布局 */
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+}
+
+#footer {
+    background-color: #fff;
+    height: 100%;
+    color: #fff;
+    font-size: 20vh;
+}
+
+.img {
+    overflow: hidden;
+    /* 背景图片不重复 */
+    background-repeat: no-repeat;
+    /* 背景图片位置：居中 */
+    background-position: center;
+    /* 背景图片固定 */
+    background-attachment: fixed;
+    background-size: cover;
+    /* 禁止用户误选中 */
+    user-select: none;
+
+}
+
+
+#img-one {
+    /* Bing 壁纸 */
+    background-image: url('https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN');
+    background-size: cover;
+}
+
+#img-two {
+    background-image: url('');
+}
+
+/* 吃掉罗淑华 */
+.content-one {
+    background: url('https://cdnjson.com/images/2023/02/13/gameCenter.gif') no-repeat fixed center;
+    /* background: url('/img/eatLuo.jpg') no-repeat fixed center; */
+    background-size: cover;
+}
+
+/* 张丽萍打篮球 */
+.content-two {
+    background: url('./img/zhangBall.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+/* 丽萍打飞机 */
+.content-three {
+    background: url('./img/hitLuo.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+.text-box {
+    width: 100%;
+    height: 50%;
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 25%;
+    /* 文字居中 */
+    text-align: center;
+    background-color: rgba(63, 81, 181, 0.5);
+    /* 旋转中心 */
+    transform-origin: center bottom;
+    /* 扭曲斜切 */
+    transform: skew(0, -8deg);
+
+}
+
+.text-box .cnt {
+    display: inline-block;
+    text-align: right;
+    margin: 40px 0 10px 0;
+    width: 90%;
+    max-width: 100vw;
+    transform-origin: right bottom;
+    transform: skew(0, 8deg);
+}
+
+.cnt h2 {
+    margin-top: 80px;
+    font-size: 70px;
+    /* text-shadow: 1px 0px 0px #323232; */
+    /* letter-spacing: 0.1em; */
+    color: #fff;
+    margin-bottom: 5px;
+    font-family: AlimamaShuHeiTi;
+    font-weight: 300;
+}
+
+.cnt p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cnt a.btn {
+    font-size: 1.7em;
+    font-family: AlimamaShuHeiTi;
+    letter-spacing: 0.2em;
+    /* text-shadow: 1px 0px 0px black; */
+    line-height: 2.8;
+    display: inline-block;
+    background-color: #eaeaea;
+    color: #000;
+    /* border: 3px solid #000; */
+    white-space: wrap;
+    text-decoration: none;
+    padding: 0 20px;
+
+}
+
+@font-face {
+    font-family: 'DeYiHei';
+    src: url('./font/DeYiHei.OTF');
+}
+
+@font-face {
+    font-family: DingTalk;
+    src: url(./font/DINGTALK.TTF);
+}
+
+@font-face {
+    font-family: AlimamaShuHeiTi;
+    src: url('./font/AlimamaShuHeiTi-Bold.woff2');
+}
+
+.mainTitle {
+    font-family: AlimamaShuHeiTi;
+    color: #F44336;
+    font-size: 15vw;
+    font-style: normal;
+    /* text-shadow: 2px 2px 2px rgba(red, green, blue, alpha); */
+}
+
+.sub-title {
+    font-family: AlimamaShuHeiTi;
+}
+
+.game-title {
+    color: #F44336 !important;
+    /* font-size: ; */
+}

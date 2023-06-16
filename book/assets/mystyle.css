@@ -1,0 +1,156 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a.btn.btn-md.btn-black-outline.display-4 {
+  display: none !important;
+}
+
+img[src="assets/images/logomakr-0zpezn-563x600.png"] {
+  width: 300px;
+}
+
+li {
+  list-style-type: none;
+  text-indent: 5px;
+}
+
+.foot-link {
+  line-height: 30px;
+  float: left
+}
+
+.copyRight {
+  align-items: center;
+
+  /* float: left; */
+}
+
+.copyRightText {
+  color: #66CCFF;
+  text-align: center;
+  /* margin-top: 100px; */
+}
+
+.bookName {
+  font-family: 'Noto Serif SC', serif;
+}
+
+.subTitle {
+  font-family: lanTingHei;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.list {
+  font-style: normal;
+  /* line-height: 2em; */
+  margin: 0;
+  padding-bottom: 0.6em;
+}
+
+@font-face {
+  font-family: FZDBS;
+  src: url('font/方正大标宋简体.OTF');
+}
+
+;
+
+.github {
+  float: left;
+}
+
+/* @font-face {
+  font-family: mingchao;
+  src: url('font/真宗圣典明朝.otf');
+} */
+
+;
+
+/* @font-face {
+  font-family: lanTingHei;
+  src: url('font/方正兰亭黑简体.OTF');
+} */
+
+/* DEMO-SPECIFIC STYLES */
+.typing {
+  color: #fff;
+  /* font-family: ; */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 4s steps(30, end),
+    blink-caret .5s step-end infinite,
+    show 1s;
+  animation-delay: 0.3s;
+  word-wrap: break-word;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+    display: block;
+  }
+
+  to {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
+}
+
+.preload {
+  display: none;
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+p {
+  letter-spacing: 0.5px !important;
+}
+
+.right {
+  overflow: hidden;
+  /* 背景图片不重复 */
+  background-repeat: no-repeat;
+  /* 背景图片位置：居中 */
+  background-position: center;
+  /* 背景图片固定 */
+  background-attachment: fixed;
+  background-size: cover;
+  /* 禁止用户误选中 */
+  user-select: none;
+}
+
+.footer {
+  margin-left: 1vw !important;
+  margin-right: 1vw !important;
+}

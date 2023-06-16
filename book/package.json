@@ -1,0 +1,29 @@
+{
+  "name": "book-publish",
+  "version": "1.0.0",
+  "description": "![](https://book.2paiqiyi.xyz/assets/images/%E7%AC%AC%E4%B8%80%E5%86%8C.png)",
+  "main": "prettierrc.js",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Duck-Deng/book-publish.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Duck-Deng/book-publish/issues"
+  },
+  "homepage": "https://github.com/Duck-Deng/book-publish#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "jquery": "^3.6.3",
+    "mdui": "^1.0.2",
+    "xgplayer": "^2.32.2"
+  }
+}
