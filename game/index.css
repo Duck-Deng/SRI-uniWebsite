@@ -78,13 +78,13 @@ section,
 
 /* 张丽萍打篮球 */
 .content-two {
-    background: url('./img/zhangBall.jpg') no-repeat fixed center;
+    background: url('/game/img/zhangBall.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
 /* 丽萍打飞机 */
 .content-three {
-    background: url('./img/hitLuo.jpg') no-repeat fixed center;
+    background: url('/game/img/hitLuo.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
@@ -150,17 +150,17 @@ section,
 
 @font-face {
     font-family: 'DeYiHei';
-    src: url('./font/DeYiHei.OTF');
+    src: url('/game/font/DeYiHei.OTF');
 }
 
 @font-face {
     font-family: DingTalk;
-    src: url(./font/DINGTALK.TTF);
+    src: url(/game/font/DINGTALK.TTF);
 }
 
 @font-face {
     font-family: AlimamaShuHeiTi;
-    src: url('./font/AlimamaShuHeiTi-Bold.woff2');
+    src: url('/game/font/AlimamaShuHeiTi-Bold.woff2');
 }
 
 .mainTitle {
