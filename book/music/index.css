@@ -52,23 +52,23 @@ section {
 }
 
 #img2 {
-    background-image: url(images/3.jpg);
+    background-image: url(/book/music/images/3.jpg);
 }
 
 #img3 {
-    background-image: url(images/6.jpg);
+    background-image: url(/book/music/images/6.jpg);
 }
 
 #img4 {
-    background-image: url(images/WenJin.jpg);
+    background-image: url(/book/music/images/WenJin.jpg);
 }
 
 #img5 {
-    background-image: url(images/img5.jpg);
+    background-image: url(/book/music/images/img5.jpg);
 }
 
 #img6 {
-    background-image: url(images/img6.jpg);
+    background-image: url(/book/music/images/img6.jpg);
 }
 
 .video-player {
