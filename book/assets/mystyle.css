@@ -155,3 +155,14 @@ p {
   margin-left: 1vw !important;
   margin-right: 1vw !important;
 }
+
+@font-face {
+  font-family: 'Star-Rail-Neue';
+  src: url('https://font.junjiantech.top/mohoyo/Star-Rail-Neue/woff2/StarRailNeue-Serif-Regular.woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Star-Rail-Neue{
+  font-family: Star-Rail-Neue !important;
+}

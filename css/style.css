@@ -27198,3 +27198,14 @@ textarea.form-control {
   font-family: 'Noto Sans SC';
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'Star-Rail-Neue';
+  src: url('https://font.junjiantech.top/mohoyo/Star-Rail-Neue/woff2/StarRailNeue-Serif-Regular.woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Star-Rail-Neue {
+  font-family: Star-Rail-Neue !important;
+}
