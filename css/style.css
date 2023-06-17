@@ -27117,6 +27117,7 @@ textarea.form-control {
   color: #8fd3f4;
   font-size: 15px;
   font-weight: bold;
+  font-family: Kanit
 }
 
 .text-gradient-foot-eng:before {
@@ -27126,6 +27127,7 @@ textarea.form-control {
   color: #84fab0;
   font-weight: bold;
   -webkit-mask: linear-gradient(to right, transparent, #c4c93e);
+  font-family: Kanit !important;
 }
 
 .text-gradient-foot-egg {
@@ -27182,7 +27184,7 @@ textarea.form-control {
 }
 
 @font-face {
-  font-family: DingTalk;
+  font-family: Alimama_DongFangDaKai;
   src: url('https://font.junjiantech.top/ALi/Alimama_DongFangDaKai/Alimama_DongFangDaKai_Regular.woff2');
 }
 
