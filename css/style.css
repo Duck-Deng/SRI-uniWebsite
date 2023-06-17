@@ -27109,7 +27109,7 @@ textarea.form-control {
   z-index: 10;
   color: #c4c93e;
   font-weight: bold;
-  -webkit-mask: linear-gradient(to right, transparent, #c4c93e);
+  mask: linear-gradient(to right, transparent, #c4c93e);
 }
 
 .text-gradient-foot-eng {
@@ -27126,7 +27126,7 @@ textarea.form-control {
   z-index: 10;
   color: #84fab0;
   font-weight: bold;
-  -webkit-mask: linear-gradient(to right, transparent, #c4c93e);
+  mask: linear-gradient(to right, transparent, #c4c93e);
   font-family: Kanit !important;
 }
 
@@ -27143,7 +27143,7 @@ textarea.form-control {
   z-index: 10;
   color: #00dbde;
   font-weight: bold;
-  -webkit-mask: linear-gradient(to right, transparent, #c4c93e);
+  mask: linear-gradient(to right, transparent, #c4c93e);
 }
 
 .text-gradient-foot-egg-big {
@@ -27159,7 +27159,7 @@ textarea.form-control {
   z-index: 10;
   color: #f9d423;
   font-weight: bold;
-  -webkit-mask: linear-gradient(to right, transparent, #c4c93e);
+  mask: linear-gradient(to right, transparent, #c4c93e);
 }
 
 .text-gradient {
@@ -27175,7 +27175,7 @@ textarea.form-control {
   z-index: 10;
   color: #c4c93e;
   font-weight: bold;
-  -webkit-mask: linear-gradient(to right, transparent, #c4c93e);
+  mask: linear-gradient(to right, transparent, #c4c93e);
 }
 
 @font-face {
