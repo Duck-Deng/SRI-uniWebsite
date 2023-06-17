@@ -498,7 +498,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      bottom: 0;
+      bottom: -5%;
       left: 50%;
       transform: translateX(-50%);
   }
@@ -511,14 +511,14 @@
 
   .wrapper .container .text article p {
       color: white;
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: 0.6px;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       text-shadow: 6px 6px 10px #32243E;
   }
 
   .wrapper .container .text article button {
-      height: 40px;
+      height: 50px;
       padding: 0 30px;
       border-radius: 50px;
       cursor: pointer;
@@ -528,7 +528,7 @@
       background-color: white;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 25px;
       transition: all 0.3s ease;
   }
 
@@ -715,4 +715,15 @@
       width: 80px;
       animation-name: pieceLeft;
       animation-delay: 4.5s;
+  }
+
+  @font-face {
+      font-family: 'Star-Rail-Neue';
+      src: url('https://font.junjiantech.top/mohoyo/Star-Rail-Neue/woff2/StarRailNeue-Serif-Regular.woff2');
+      font-style: normal;
+      font-weight: normal;
+  }
+
+  .Star-Rail-Neue {
+      font-family: Star-Rail-Neue !important;
   }
