@@ -27,9 +27,10 @@ li {
 }
 
 .copyRightText {
-  color: #66CCFF;
+  color: #5392fa;
   text-align: center;
-  /* margin-top: 100px; */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .bookName {
@@ -51,7 +52,7 @@ li {
 
 @font-face {
   font-family: FZDBS;
-  src: url('/book/font/方正大标宋简体.OTF');
+  src: url('font/方正大标宋简体.OTF');
 }
 
 ;
