@@ -179,3 +179,19 @@ section,
     color: #F44336 !important;
     /* font-size: ; */
 }
+
+.shiLinTiShi {
+    padding-left: 2em;
+}
+
+.CADPA {
+    margin-right: 5px;
+    display: inline-block;
+    height: 95.15px;
+}
+
+.CADPA-a {
+    vertical-align: middle;
+    margin-right: 5px;
+    display: inline-block;
+}
