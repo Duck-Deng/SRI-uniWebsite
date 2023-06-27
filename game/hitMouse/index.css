@@ -19,7 +19,7 @@ body {
 #box td {
     width: 100px;
     height: 100px;
-    background-image: url('image/hole.png');
+    background-image: url('/game/hitMouse/image/hole.png');
     background-size: 100px 30px;
     background-repeat: no-repeat;
     background-position: center bottom;
