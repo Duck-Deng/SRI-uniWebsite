@@ -20,7 +20,7 @@ html {
 #startdiv {
     width: 100%;
     height: 100vh;
-    background: url(/image/startScreen.png) center no-repeat;
+    background: url('/game/ZhangHitPlane/image/startScreen.png') center no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
@@ -86,8 +86,6 @@ button {
     font-family: 'Noto Sans SC';
     display: block;
 }
-
-#ourplan {}
 
 #enddiv {
     position: absolute;
