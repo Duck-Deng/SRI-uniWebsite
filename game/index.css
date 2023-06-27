@@ -78,7 +78,7 @@ section,
 
 /* 张丽萍打篮球 */
 .content-two {
-    background: url('./img/zhangBall.jpg') no-repeat fixed center;
+    background: url('/game/img/zhangBall.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
@@ -90,7 +90,7 @@ section,
 
 /* 打地淑 */
 .content-four {
-    background: url('./hitMouse/image/bg1.jpg') no-repeat fixed center;
+    background: url('/game/hitMouse/image/bg1.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
