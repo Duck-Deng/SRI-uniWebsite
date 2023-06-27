@@ -84,7 +84,7 @@ section,
 
 /* 丽萍打飞机 */
 .content-three {
-    background: url('./ZhangBall/images/startScreen.png') no-repeat fixed center;
+    background: url('/game/ZhangHitPlane/image/startScreen.png') no-repeat fixed center;
     background-size: cover;
 }
 
