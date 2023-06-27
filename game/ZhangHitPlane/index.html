@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" href="/image/bullet1.png" />
+  <title>丽萍打飞机</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.3.0/scss/_variables.scss">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.3.0/scss/_functions.scss">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div id="contentdiv">
+    <div id="startdiv">
+      <div style="text-align: center; padding-top: 40vh;">
+        <h1 class="display-1 mainTitle">丽萍打飞机</h1>
+        <a class="mdui-ripple CADPA-a" mdui-dialog="{target: '#game1'}">
+          <img src="https://font.junjiantech.top/CADPA/12+.svg" class="CADPA" alt="CADPA level 12+"></a>
+        <img style="vertical-align: middle;" src="https://font.junjiantech.top/CADPA/ESRB/ESRB_2013_Everyone_10+.svg"
+          class="CADPA" alt="ESRB level everyone">
+        <img style="vertical-align: middle;" src="https://font.junjiantech.top/CADPA/IARC/IARC_7+.svg" class="CADPA"
+          alt="IARC level 3+">
+        <p style="font-size: 17px; padding: 20px;color: auto;">本游戏拒绝履行《网络游戏行业防沉迷自律公约》<br>健康游戏忠告：抵制不良游戏，拒绝盗版游戏
+          注意自我保护，谨防上当受骗 适度游戏益脑，沉迷游戏伤身 合理安排时间，享受健康生活</p>
+      </div>
+      <button class="btn btn-primary btn-lg" onclick="begin()">
+        开始游戏
+      </button>
+    </div>
+    <div class="mdui-dialog" id="game1">
+      <div class="mdui-dialog-title">《淑华打子勤》适龄提示</div>
+      <div class="mdui-dialog-content">
+        <ol class="shiLinTiShi">
+          <li>本游戏是一款运借街机类型的休闲游戏，适用于年满12周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。</li>
+          <li>游戏中没有基于文字和语音的陌生人社交系统。</li>
+          <li>本游戏中没有用户实名认证系统，认证为未成年人的用户<b>不接受</b>以下管理：<br>•&nbsp;游戏中<b>无收费内容</b>。未成年用户<b>全天候</b>可以体验游戏。
+          </li>
+          <li>本游戏有助于锻炼玩家的观察力、反应力和专注力，能够使玩家熟悉物理反弹规律。规则简单，有不同难度可供选择。</li>
+        </ol>
+      </div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+    </div>
+
+    <div id="maindiv">
+      <div id="scorediv">
+        <label>分数：</label>
+        <label id="label">0</label>
+      </div>
+      <div id="suspenddiv">
+        <button class="btn btn-primary btn-sm bg-green-500 !important" block="{false}" ghost="{false}" loading="{false}" shape="round"
+          size="large" type="button" variant="base">
+          继续
+        </button>
+        <button class="btn btn-primary btn-sm bg-green-500" block="{false}" ghost="{false}" loading="{false}" shape="round"
+          size="large" type="button" variant="base">
+          重新开始
+        </button>
+        <button class="btn btn-primary btn-sm bg-green-500" block="{false}" ghost="{false}" loading="{false}" shape="round"
+          size="large" type="button" variant="base">
+          回到主页
+        </button>
+      </div>
+      <div id="enddiv">
+        <p class="plantext">你被钟馗捉去了</p>
+        <p id="planscore">0</p>
+        <div>
+
+          <button class="btn btn-primary btn-lg" oblock="{false}" ghost="{false}" loading="{false}" shape="round"
+            size="large" type="button" variant="base" onclick="jixu()">
+            继续游戏
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <audio id="sound-kill" src="sound/shot.mp3"></audio>
+    <audio id="sound-gameover" src="sound/gameover.mp3"></audio>
+  </section>
+  <script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

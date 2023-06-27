@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.2.3/css/bootstrap.min.css" />
+	<link rel="shortcut icon" href="./images/ball.png" />
+	<link rel="stylesheet" href="css/style.css?s=2" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.loli.net/css2?family=Kanit&family=Noto+Sans+SC:wght@400;700&family=Oswald&family=Teko:wght@300&display=swap"
+		rel="stylesheet" />
+	<title>罗淑华，你的眼睛在哪里？</title>
+	<!--<link rel="stylesheet" href="css/common.css">-->
+	<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/showdown/2.1.0/showdown.min.js"></script>
+	<script src="https://cdn.staticfile.org/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</head>
+
+<body style="margin-top: 5vh">
+	<div class="container">
+		<div class="mdui-dialog" id="game2">
+			<div class="mdui-dialog-title">《淑华打子勤》适龄提示</div>
+			<div class="mdui-dialog-content">
+				<ol class="shiLinTiShi">
+					<li>
+						本游戏是一款运借街机类型的休闲游戏，适用于年满8周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。
+					</li>
+					<li>游戏中没有基于文字和语音的陌生人社交系统。</li>
+					<li>
+						本游戏中没有用户实名认证系统，认证为未成年人的用户<b>不接受</b>以下管理：<br />•&nbsp;游戏中<b>无收费内容</b>。未成年用户<b>全天候</b>可以体验游戏。
+					</li>
+					<li>
+						本游戏有助于锻炼玩家的观察力、反应力和专注力，能够使玩家熟悉物理反弹规律。规则简单，有不同难度可供选择。
+					</li>
+				</ol>
+			</div>
+			<div class="mdui-dialog-actions">
+				<button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="mainTitle" style="text-align: center; margin-bottom: 0; ">
+					淑华一家爆掉了</h2>
+				<!-- <hr /> -->
+				<center>
+					<div style=" padding-bottom: 5px">
+						<div class="input-group">
+							<span class="input-group-addon difficulty" style="
+                    text-align: center;
+                    line-height: 38px;
+                    padding-right: 10px;
+                  ">难度</span>
+							<select class="form-control rounded" id="ballspeedset">
+								<option value="2">简单难度</option>
+								<option value="3" selected>普通难度</option>
+								<option value="5">困难模式</option>
+								<option value="7">极限模式</option>
+								<option value="9">非人类</option>
+							</select>
+						</div>
+						<div class="input-group-btn botton-group">
+							<button type="button" class="btn btn-danger" onclick="window.startGame()">
+								开始游戏
+							</button>
+							<button type="button" class="btn btn-warning" onclick="window.pauseGame()">
+								暂停游戏
+							</button>
+							<button type="button" class="btn btn-success" onclick="window.nextGame()">
+								下个关卡
+							</button>
+						</div>
+					</div>
+				</center>
+				<center id="cdiv" style="width: 100mvw">
+					<p>
+						<canvas id="canvas" style="width: 100%; height: 563px"></canvas>
+					</p>
+				</center>
+				<hr />
+				<h3 class="sub-title">操作说明</h3>
+				<p><b>移动端</b>&nbsp;通过&nbsp;<b>长按屏幕左右部分</b>&nbsp;控制张丽萍移动。</p>
+				<p>
+					<b>PC</b>&nbsp;使用&nbsp;<b>方向键</b>&nbsp;控制张丽萍左右移动，使用&nbsp;<b>回车Enter</b>&nbsp;让张丽萍发球，按&nbsp;<b>P</b>&nbsp;暂停游戏，通关后按&nbsp;<b>N</b>&nbsp;进入下一关。
+				</p>
+				<p>
+					特殊技能：按&nbsp;<b>W</b>&nbsp;发起钟馗鬼步，&nbsp;<b>5&nbsp;秒</b>内可以&nbsp;<b>100%</b>&nbsp;接住球，每次消耗&nbsp;<b>1000</b>&nbsp;积分。
+				</p>
+				<hr />
+				<div style="margin-top: -10px">
+					<a class="mdui-ripple CADPA-a" mdui-dialog="{target: '#game2'}">
+						<img src="https://font.junjiantech.top/CADPA/8+.svg" class="CADPA" alt="CADPA level 8+" /></a>
+					<img src="https://font.junjiantech.top/CADPA/ESRB/ESRB_2013_Everyone_10+.svg" class="CADPA"
+						alt="ESRB level everyone" />
+					<img src="https://font.junjiantech.top/CADPA/IARC/IARC_7+.svg" class="CADPA" alt="IARC level 3+" />
+					<p style="font-size: 16px; line-height: 20px;">
+						本游戏拒绝履行《网络游戏行业防沉迷自律公约》<br />健康游戏忠告：抵制不良游戏，拒绝盗版游戏
+						注意自我保护，谨防上当受骗 适度游戏益脑，沉迷游戏伤身
+						合理安排时间，享受健康生活
+					</p>
+				</div>
+
+				<hr />
+				<p>
+					Github 开源项目：<a href="https://github.com/Duck-Deng/ZhangBall"
+						target="_blank">https://github.com/Duck-Deng/ZhangBall</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- 图片预缓存 -->
+<img src="images/ball.png" style="width: 0px; height: 0px" />
+<img src="images/ballshadow.png" style="width: 0px; height: 0px" />
+<img src="images/paddle_1.png" style="width: 0px; height: 0px" />
+<img src="images/paddle_2.png" style="width: 0px; height: 0px" />
+<img src="images/paddle2_1.png" style="width: 0px; height: 0px" />
+<img src="images/paddle2_2.png" style="width: 0px; height: 0px" />
+<img src="images/paddle3_1.png" style="width: 0px; height: 0px" />
+<img src="images/paddle3_2.png" style="width: 0px; height: 0px" />
+<img src="images/paddle4_1.png" style="width: 0px; height: 0px" />
+<img src="images/paddle4_2.png" style="width: 0px; height: 0px" />
+<!-- 背景音乐（已删除） -->
+<!-- <audio src="" style="width: 0px;height: 0px;border: 0px;" id="audio" loop="-1"></audio> -->
+<script src="js/common.js?s=4"></script>
+<script src="js/scene.js?s=4"></script>
+<script src="js/skills.js?s=4"></script>
+<script src="js/game.js?s=4"></script>
+<script src="js/main.js?s=4"></script>
+<script src="index.js"></script>
+<script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+
+</html>

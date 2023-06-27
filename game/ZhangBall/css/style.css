@@ -1,0 +1,75 @@
+canvas {
+	display: block;
+	border: 2px solid rgba(255, 255, 255, 0.0);
+	background: transparent;
+}
+
+#cdiv {
+	background: url(../images/background.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.CADPA {
+	margin: 5px;
+	display: inline-block;
+	height: 75px;
+}
+
+.CADPA-a {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.mainTitle {
+	font-family: AlimamaShuHeiTi;
+	font-size: 50px;
+	margin-top: -35px;
+}
+
+.sub-title {
+	font-family: AlimamaShuHeiTi;
+	font-size: 30px;
+}
+
+@font-face {
+	font-family: 'AlimamaShuHeiTi';
+	src: url('https://font.junjiantech.top/ALi/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff2');
+}
+
+b {
+	font-weight: 800;
+	font-family: 'Noto Sans SC';
+	font-size: 1.15em;
+}
+
+p {
+	font-weight: 400;
+	font-family: 'Noto Sans SC';
+	margin-bottom: 0;
+}
+
+.difficulty {
+	text-align: center;
+	line-height: 38px;
+	padding-right: 5px;
+	font: 800 20px 'Noto Sans SC'
+}
+
+.input-group-btn > .btn{
+	padding-right: 5px;
+}
+
+.botton-group{
+	display: block;
+	padding-top: 5px;
+}

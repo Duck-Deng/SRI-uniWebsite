@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+
+<head>
+  <title data-i18n="eat-kano"></title>
+  <meta itemprop="name" content="吃掉罗淑华" />
+  <meta itemprop="description" content="你比毛泽东还很" />
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="luo.png" />
+  <meta name="viewport"
+    content="initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, width=device-width,target-densitydpi=device-dpi" />
+  <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="https://cdn.staticfile.org/jsencrypt/3.3.1/jsencrypt.min.js"></script>
+  <!-- MDUI CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+  <link href="./static/index.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.staticfile.org/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.staticfile.org/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+  <script src="DianPing.js"></script>
+</head>
+
+<body onLoad="init();myfunction();zero()" oncontextmenu="self.event.returnValue"="false">
+  <div class="mdui-dialog" id="game1">
+    <div class="mdui-dialog-title">《吃掉罗淑华》适龄提示</div>
+    <div class="mdui-dialog-content">
+      <ol class="shiLinTiShi">
+        <li>本游戏是一款音乐节奏类型的休闲游戏，适用于年满8周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。</li>
+        <li>本游戏基于一班八年级时期的故事背景，围绕一班“一二·九事变”的剧情展开。游戏玩法基于音乐节奏。鼓励培养玩家音乐节奏感及反应能力，游戏中没有基于文字和语音的陌生人社交系统。</li>
+        <li>本游戏中没有用户实名认证系统，认证为未成年人的用户<b>不接受</b>以下管理：<br>•&nbsp;游戏中<b>无收费内容</b>。未成年用户<b>全天候</b>可以体验游戏。
+        </li>
+        <li>本游戏采用风格鲜明的美术设计，明了自然的界面，优质的音乐效果。上手简单、轻松有趣之余，又可以切身体验到罗淑华的压迫感。</li>
+      </ol>
+    </div>
+    <div class="mdui-dialog-actions">
+      <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+    </div>
+  </div>
+
+  <div id="GameScoreLayer" class="BBOX SHADE bgc1" style="display: none">
+    <div style="
+          padding: 5%;
+          margin-top: 10px;
+          background-color: rgba(79, 172, 254, 0.5);">
+
+      <div id="demo" class="score-text"></div>
+      <div id="GameScoreLayer-CPS" class="mb-2 d-flex flex-row justify-content-center text-start">
+        <div class="col-3">CPS</div>
+        <div class="col-2" id="cps"></div>
+      </div>
+
+      <div id="GameScoreLayer-score" class="mb-2 d-flex flex-row justify-content-center text-start">
+        <div class="col-3" data-i18n="score"></div>
+        <div class="col-2" id="score"></div>
+      </div>
+      <div id="GameScoreLayer-bast" class="mb-2 d-flex flex-row justify-content-center text-start">
+        <div class="col-3" data-i18n="best"></div>
+        <div class="col-2" id="best"></div>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg mb-3 button-normal" id="replay" onclick="replayBtn()"
+        data-i18n="again">
+        AGAIN-I18N
+      </button>
+      <button type="button" class="btn btn-primary btn-lg mb-3 button-normal" onclick="window.location.reload()"
+        data-i18n="home">
+        HOME-I18N
+      </button>
+      <button type="button" class="btn btn-primary btn-lg mb-3 button-normal"
+        onclick="window.location.href='https://github.com/Duck-Deng/EatLuo'" data-i18n="repo">
+        REPO-I18N
+      </button>
+
+    </div>
+  </div>
+  <div id="welcome" class="SHADE BOX-M">
+    <div class="welcome-bg FILL"></div>
+    <div class="FILL BOX-M" style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 5;
+        ">
+      <div class="container">
+        <div class="container mb-5">
+          <div style="font-size: 2.6em; color: #fef002;" data-i18n="game-title">
+            GAME-TITLE-I18N
+          </div>
+          <br />
+          <div id="desc" style="
+                font-weight: 500;
+                display: block;
+                font-size: 1.6em;
+                color: #fff;
+                line-height: 1.4em;
+              ">
+            <span data-i18n="game-intro1">GAME-INTRO1-I18N</span><br>
+            <span data-i18n="game-intro2">GAME-INTRO2-I18N</span><br>
+            <span style="padding-bottom: 8px;" data-i18n="game-intro3">GAME-INTRO3-I18N</span><br>
+            <div style="margin-top: 15px;">
+              <a class="mdui-ripple CADPA-a" mdui-dialog="{target: '#game1'}">
+                <img src="https://font.junjiantech.top/CADPA/8+.svg" class="CADPA" alt="CADPA level 8+"></a>
+              <img src="https://font.junjiantech.top/CADPA/ESRB/ESRB_2013_Everyone.svg" class="CADPA"
+                alt="ESRB level everyone">
+              <img src="https://font.junjiantech.top/CADPA/IARC/IARC_3+.svg" class="CADPA" alt="IARC level 3+">
+              <p style="font-size: 16px; line-height: 20px; padding-top: 10px;">
+                本游戏拒绝履行《网络游戏行业防沉迷自律公约》<br>健康游戏忠告：抵制不良游戏，拒绝盗版游戏
+                注意自我保护，谨防上当受骗 适度游戏益脑，沉迷游戏伤身 合理安排时间，享受健康生活</p>
+            </div>
+          </div>
+        </div>
+        <div id="btn_group" class="container text-nowrap">
+          <div class="d-flex justify-content-center flex-column flex-fill">
+            <a class="btn btn-primary btn-lg mb-3 bottom-start" onclick="readyBtn()" data-i18n="start">START-I18N</a>
+            <div class="dropdown">
+              <a class="w-100 button-normal btn btn-primary btn-lg mb-3" href="javascript: void(0);" role="button"
+                id="mode" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="normal">NORMAL-I18N</a>
+              <ul class="dropdown-menu" aria-labelledby="mode">
+                <li>
+                  <a class="dropdown-item" onclick="changeMode(MODE_NORMAL)" data-i18n="normal">NORMAL-I18N</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="changeMode(MODE_ENDLESS)" data-i18n="endless">ENDLESS-I18N</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" onclick="changeMode(MODE_PRACTICE)" data-i18n="practice">PRACTICE-I18N</a>
+                </li>
+              </ul>
+            </div>
+            <a class="btn btn-primary btn-lg mb-3 button-normal" onclick="show_setting()"
+              data-i18n="settings">SETTINGS-I18N</a>
+          </div>
+        </div>
+        <div id="setting" class="container" style="display: none">
+          <div class="container mb-3 btn-group">
+            <a data-i18n="img-before" type="button"
+              class="btn text-nowrap btn-secondary me-1 btn-primary btn-lg mb-3 button-normal"
+              onclick="getClickBeforeImage()" style="left: 0">IMG-BEFORE-I18N</a>
+            <input type="file" id="click-before-image" accept="image/*" class="d-none"
+              onchange="saveClickBeforeImage()" />
+            <a data-i18n="img-after" type="button" class="btn text-nowrap btn-secondary me-1"
+              onclick="getClickAfterImage()" style="right: 0">IMG-AFTER-I18N</a>
+            <input type="file" id="click-after-image" accept="image/*" style="display: none"
+              onchange="saveClickAfterImage()" />
+            <a id="sound" type="button" class="btn text-nowrap btn-secondary" onclick="changeSoundMode()"></a>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend col-2">
+              <span class="input-group-text" data-i18n="title">TITLE-I18N</span>
+            </div>
+            <input data-placeholder-i18n="eat-kano" type="text" id="title" class="form-control"
+              placeholder="EAT-KANO-I18N" />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend col-2">
+              <span data-i18n="key" class="input-group-text">KEY-I18N</span>
+            </div>
+            <input data-placeholder-i18n="default-dfjk" type="text" id="keyboard" class="form-control" maxlength="4"
+              placeholder="DFJK-I18N" />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend col-2">
+              <span data-i18n="time" class="input-group-text">TIME-I18N</span>
+            </div>
+            <input data-placeholder-i18n="default-20s" type="text" id="gameTime" class="form-control" maxlength="4"
+              placeholder="default-20s" />
+          </div>
+          <button type="button" class="btn btn-primary btn-lg mb-3 button-normal" onclick="show_btn();save_cookie();"
+            data-i18n="ok">
+            OK-I18N
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./static/index.js"></script>
+  <!-- MDUI JavaScript -->
+  <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</body>
+
+</html>
