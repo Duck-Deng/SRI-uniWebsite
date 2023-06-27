@@ -5,7 +5,7 @@ canvas {
 }
 
 #cdiv {
-	background: url(../images/background.jpg) no-repeat;
+	background: url(/game/ZhangBall/images/background.jpg) no-repeat;
 	background-size: cover;
 	background-position: center;
 }
@@ -44,6 +44,7 @@ canvas {
 @font-face {
 	font-family: 'AlimamaShuHeiTi';
 	src: url('https://font.junjiantech.top/ALi/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff2');
+	font-display: block;
 }
 
 b {
@@ -65,11 +66,11 @@ p {
 	font: 800 20px 'Noto Sans SC'
 }
 
-.input-group-btn > .btn{
+.input-group-btn>.btn {
 	padding-right: 5px;
 }
 
-.botton-group{
+.botton-group {
 	display: block;
 	padding-top: 5px;
 }
