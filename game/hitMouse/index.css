@@ -1,0 +1,60 @@
+@import url('https://fonts.loli.net/css2?family=Agdasima:wght@700&display=swap');
+
+html {
+
+    height: 100px;
+}
+
+body {
+    margin: 0;
+    height: 100px;
+    background-image: url('/game/hitMouse/image/bg1.jpg');
+}
+
+#box {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+#box td {
+    width: 100px;
+    height: 100px;
+    background-image: url('image/hole.png');
+    background-size: 100px 30px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    text-align: center;
+}
+
+.mouse {
+    width: 98px;
+    height: auto;
+    transition: all 0.5s;
+    transform-origin: 50% 100%;
+}
+
+.mouse-down {
+    transform: scale(1, 0);
+}
+
+.hammer-down {
+    cursor: url(image/)
+}
+
+@font-face {
+    font-family: 'AlimamaShuHeiTi';
+    src: url('https://font.junjiantech.top/ALi/AlimamaShuHeiTi/AlimamaShuHeiTi-Bold.woff2');
+}
+
+.score {
+    font-family: AlimamaShuHeiTi;
+    font-weight: 700;
+    font-size: 50px;
+    color: #0958d9;
+    margin: 20px;
+}
+
+.score-number {
+    font-family: 'Agdasima';
+    color: #fa541c;
+}
