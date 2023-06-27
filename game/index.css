@@ -84,13 +84,13 @@ section,
 
 /* 丽萍打飞机 */
 .content-three {
-    background: url('./img/hitLuo.jpg') no-repeat fixed center;
+    background: url('./ZhangBall/images/startScreen.png') no-repeat fixed center;
     background-size: cover;
 }
 
 /* 打地淑 */
 .content-four {
-    background: url('/game/hitMouse/image/bg1.jpg') no-repeat fixed center;
+    background: url('./hitMouse/image/bg1.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
