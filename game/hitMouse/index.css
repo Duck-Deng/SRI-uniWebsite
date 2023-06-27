@@ -58,3 +58,15 @@ body {
     font-family: 'Agdasima';
     color: #fa541c;
 }
+
+.CADPA {
+    margin: 5px;
+    display: inline-block;
+    height: 75px;
+}
+
+.CADPA-a {
+    /* vertical-align: middle; */
+    display: inline-block;
+    
+}

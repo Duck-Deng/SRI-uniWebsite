@@ -88,6 +88,12 @@ section,
     background-size: cover;
 }
 
+/* 打地淑 */
+.content-four {
+    background: url('/game/hitMouse/image/bg1.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
 .text-box {
     width: 100%;
     height: 50%;
