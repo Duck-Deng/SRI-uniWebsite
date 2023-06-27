@@ -1,115 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/game/hitMouse/index.css">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css">
-    <link rel="preconnect" href="https://https://fonts.loli.net/">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.loli.net//css2?family=Agdasima:wght@700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/game/hitMouse/favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/game/hitMouse/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/game/hitMouse/favicon.png"
+      type="image/x-icon"
+    />
     <title>打地淑</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <audio src="audio/dazhong.wav" id="hit"></audio>
 
-    <p class="score">得分：<b class="score-number" id="score-number">0</b>&nbsp;个</p>
-
+    <p class="score"
+      >得分：<b class="score-number" id="score-number">0</b>&nbsp;个</p
+    >
+    <p class="score" id="time"></p>
     <table id="box">
-        <tr>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-            <td>
-                <img src="/game/hitMouse/image/mouse.png" alt="" class="mouse mouse-down">
-            </td>
-        </tr>
+      <tr>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+        <td>
+          <img
+            src="/game/hitMouse/image/mouse.png"
+            alt=""
+            class="mouse mouse-down"
+          />
+        </td>
+      </tr>
     </table>
-    <div style="margin-top: 20px;  display: flex; justify-content: center;">
-        <a class="mdui-ripple CADPA-a" mdui-dialog="{target: '#game4'}">
-            <img src="https://font.junjiantech.top/CADPA/8+.svg" class="CADPA" alt="CADPA level 8+"></a>
-        <img src="https://font.junjiantech.top/CADPA/ESRB/ESRB_2013_Everyone.svg" class="CADPA"
-            alt="ESRB level everyone">
-        <img src="https://font.junjiantech.top/CADPA/IARC/IARC_3+.svg" class="CADPA" alt="IARC level 3+">
+    <div style="margin-top: 20px; display: flex; justify-content: center">
+      <button class="btn btn-primary btn-lg" id="start">开始游戏</button>
+      <a class="mdui-ripple CADPA-a" mdui-dialog="{target: '#game4'}">
+        <img
+          src="https://font.junjiantech.top/CADPA/8+.svg"
+          class="CADPA"
+          alt="CADPA level 8+"
+      /></a>
+      <img
+        src="https://font.junjiantech.top/CADPA/ESRB/ESRB_2013_Everyone.svg"
+        class="CADPA"
+        alt="ESRB level everyone"
+      />
+      <img
+        src="https://font.junjiantech.top/CADPA/IARC/IARC_3+.svg"
+        class="CADPA"
+        alt="IARC level 3+"
+      />
     </div>
-    <p style="font-size: 16px; line-height: 20px; padding-top: 10px; color:#fff ;text-align: center;">
-        本游戏拒绝履行《网络游戏行业防沉迷自律公约》<br>健康游戏忠告：抵制不良游戏，拒绝盗版游戏
-        注意自我保护，谨防上当受骗 适度游戏益脑，沉迷游戏伤身 合理安排时间，享受健康生活</p>
+    <p
+      style="
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 10px;
+        color: #fff;
+        text-align: center;
+      "
+    >
+      本游戏拒绝履行《网络游戏行业防沉迷自律公约》<br />健康游戏忠告：抵制不良游戏，拒绝盗版游戏
+      注意自我保护，谨防上当受骗 适度游戏益脑，沉迷游戏伤身
+      合理安排时间，享受健康生活</p
+    >
 
     <div class="mdui-dialog" id="game4">
-        <div class="mdui-dialog-title">《打地淑》适龄提示</div>
-        <div class="mdui-dialog-content">
-            <ol class="shiLinTiShi">
-                <li>本游戏是一款休闲游戏，适用于年满8周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。</li>
-                <li>游戏中没有基于文字和语音的陌生人社交系统。</li>
-                <li>本游戏中没有用户实名认证系统，认证为未成年人的用户<b>不接受</b>以下管理：<br>•&nbsp;游戏中<b>无收费内容</b>。未成年用户<b>全天候</b>可以体验游戏。
-                </li>
-                <li>本游戏有助于锻炼玩家的手眼协调能力和快速反应能力，能够使玩家通过爽快的打击感发泄对罗淑华的负面情绪。</li>
-                <li>本游戏画面风格写实、人物和场景丰富多样，有丰富的音效来烘托游戏氛围。
-                </li>
-            </ol>
-        </div>
-        <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
-        </div>
+      <div class="mdui-dialog-title">《打地淑》适龄提示</div>
+      <div class="mdui-dialog-content">
+        <ol class="shiLinTiShi">
+          <li
+            >本游戏是一款休闲游戏，适用于年满8周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。</li
+          >
+          <li>游戏中没有基于文字和语音的陌生人社交系统。</li>
+          <li
+            >本游戏中没有用户实名认证系统，认证为未成年人的用户<b>不接受</b>以下管理：<br />•&nbsp;游戏中<b>无收费内容</b>。未成年用户<b>全天候</b>可以体验游戏。
+          </li>
+          <li
+            >本游戏有助于锻炼玩家的手眼协调能力和快速反应能力，能够使玩家通过爽快的打击感发泄对罗淑华的负面情绪。</li
+          >
+          <li
+            >本游戏画面风格写实、人物和场景丰富多样，有丰富的音效来烘托游戏氛围。
+          </li>
+        </ol>
+      </div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
     </div>
+  </body>
 
-</body>
-
-<script src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
-<script src="/game/hitMouse/ index.js"></script>
-
+  <script src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+  <script src="https://cdn.staticfile.org/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <script src="/game/hitMouse/index.js"></script>
 </html>

@@ -1,7 +1,6 @@
 @import url('https://fonts.loli.net/css2?family=Agdasima:wght@700&display=swap');
 
 html {
-
     height: 100px;
 }
 
@@ -38,7 +37,7 @@ body {
 }
 
 .hammer-down {
-    cursor: url(image/)
+    cursor: url(image/);
 }
 
 @font-face {
@@ -68,5 +67,4 @@ body {
 .CADPA-a {
     /* vertical-align: middle; */
     display: inline-block;
-    
 }
