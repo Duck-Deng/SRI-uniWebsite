@@ -44,7 +44,7 @@ function makeMouse() {
 
   setTimeout(function () {
     $('.mouse').eq(index).addClass('mouse-down');
-  }, 800);
+  }, 500);
 }
 
 // 阻止拖拽图片时在新页面中打开
