@@ -1,63 +1,32 @@
-var mouseClickCount = 0; // 记录点击次数的变量
-var gameStarted = false; // 记录游戏是否已开始的变量
-var countdownTimer; // 倒计时计时器变量
-
 $('#start').on('click', function () {
   startGame();
-  $(this).hide(); // 隐藏 "start" 按钮
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var timedownElement = document.getElementById('timedown');
+  timedownElement.style.display = 'none';
+});
+
+var intervalId; // 保存 setInterval 的 ID
+var countdownId; // 保存倒计时的 ID
 
 function startGame() {
-  gameStarted = true; // 设置游戏已开始标志为 true
+  $('#start').hide(); // 隐藏 "start" 按钮
+  $('#stop').removeClass('hide'); //显示停止按钮
+  $('#time').show(); //显示分数
+  $('#timedown').show(); //显示倒计时
+
   mouseClickCount = 0; // 重置点击次数
   updateScore(); // 更新分数显示
-  countdown(20); // 启动倒计时，设置为 20 秒
 
-  $('.mouse').removeClass('mouse-down'); // 移除老鼠样式
+  // 启动定时器，每秒调用一次 makeMouse()
+  intervalId = setInterval(makeMouse, 1000);
 
-  // 每秒生成老鼠
-  setInterval(function () {
-    if (gameStarted) {
-      makeMouse();
-    }
-  }, 1000);
-}
-
-// 生成老鼠
-function makeMouse() {
-  var index = Math.floor(Math.random() * 16);
-  $('.mouse').eq(index).addClass('mouse-down'); // 添加老鼠样式
-  $('.mouse').eq(index).show(); // 显示老鼠
-  setTimeout(function () {
-    if (gameStarted) {
-      $('.mouse').eq(index).removeClass('mouse-down'); // 移除老鼠样式
-      $('.mouse').eq(index).hide(); // 隐藏老鼠
-    }
-  }, 2000);
-}
-
-// 点击老鼠
-$('.mouse').on('click', function (e) {
-  if (gameStarted) {
-    $(this).addClass('mouse-down');
-    $('#hit')[0].play();
-
-    mouseClickCount++; // 每次点击时增加点击次数
-    updateScore(); // 更新分数显示
-  }
-});
-
-// 更新分数显示的函数
-function updateScore() {
-  $('#score-number').text(mouseClickCount);
-}
-
-// 倒计时函数
-function countdown(seconds) {
-  var remainingSeconds = seconds;
+  // 启动倒计时，设置为 10 秒
+  var remainingSeconds = 20;
   $('#time').text(remainingSeconds); // 显示倒计时初始值
 
-  countdownTimer = setInterval(function () {
+  countdownId = setInterval(function () {
     remainingSeconds--;
     if (remainingSeconds >= 0) {
       $('#time').text(remainingSeconds); // 更新倒计时显示
@@ -67,13 +36,56 @@ function countdown(seconds) {
   }, 1000);
 }
 
+// 生成老鼠
+function makeMouse() {
+  var index = Math.floor(Math.random() * 16);
+
+  $('.mouse').eq(index).removeClass('mouse-down');
+
+  setTimeout(function () {
+    $('.mouse').eq(index).addClass('mouse-down');
+  }, 800);
+}
+
+// 阻止拖拽图片时在新页面中打开
+document.body.ondrop = function (e) {
+  e.stopPropagation();
+  e.preventDefault();
+};
+
+$('body').on('mousedown', function () {
+  $('body').addClass('hammer-down');
+});
+
+$('body').on('mouseup', function () {
+  $('body').removeClass('hammer-up');
+});
+
+var mouseClickCount = 0; // 记录点击次数的变量
+
+$('.mouse').on('click', function (e) {
+  $(this).addClass('mouse-down');
+  $('#hit')[0].play();
+
+  mouseClickCount++; // 每次点击时增加点击次数
+  updateScore(); // 更新分数显示
+});
+
+// 更新分数显示的函数
+function updateScore() {
+  $('#score-number').text(mouseClickCount);
+}
+
 // 停止游戏
 function stopGame() {
-  gameStarted = false; // 设置游戏已结束标志为 false
-  clearInterval(countdownTimer); // 停止倒计时计时器
-  $('.mouse').removeClass('mouse-down'); // 移除老鼠样式
-  $('.mouse').hide(); // 隐藏所有老鼠
+  clearInterval(intervalId); // 停止生成老鼠的定时器
+  clearInterval(countdownId); // 停止倒计时的定时器
+  $('.mouse').addClass('mouse-down'); // 移除老鼠样式
   $('#start').show(); // 显示 "start" 按钮
-  mouseClickCount = 0; // 重置点击次数
-  updateScore(); // 更新分数显示
+  $('#stop').addClass('hide'); //显示停止按钮
 }
+
+$('#stop').on('click', function () {
+  stopGame(); //停止游戏
+  $('#timedown').hide(); //隐藏倒计时
+});
