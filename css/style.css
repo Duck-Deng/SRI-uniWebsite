@@ -8,12 +8,6 @@
  */
 @import url("43de2d28871449afacfb22c49aa31e7b.css");
 
-/* 黑白 */
-/* html {
-  -webkit-filter: grayscale(100%);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1)
-} */
-
 html:root {
   --blue: #007bff;
   --indigo: #6610f2;

@@ -1,8 +1,3 @@
-/* html {
-  -webkit-filter: grayscale(100%);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1);
-} */
-
 * {
 	margin: 0px;
 	padding: 0px;
@@ -14,7 +9,7 @@ a {
 }
 
 #banner {
-	background: url('http://www.bing.com//th?id=OHR.CubanTody_ZH-CN8656368705_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp');
+	background: url('https://www.bing.com//th?id=OHR.CubanTody_ZH-CN8656368705_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp');
 	background-size: cover;
 	background-position: center;
 	width: 100%;
