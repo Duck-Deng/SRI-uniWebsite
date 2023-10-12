@@ -1,3 +1,9 @@
+  html,
+  body {
+      overflow: hidden !important;
+      height: 100% !important;
+  }
+
   .about {
       position: fixed;
       z-index: 10;
