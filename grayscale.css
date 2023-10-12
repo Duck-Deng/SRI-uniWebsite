@@ -1,4 +1,4 @@
 html {
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(0%);
   filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1)
 }
