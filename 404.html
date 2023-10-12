@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body scroll="no">
   <!-- about -->
   <!-- <div class="about">
     <a class="bg_links social portfolio" href="https://haiyongcsdn.gitee.io/" target="_blank">
@@ -104,6 +104,49 @@
   <script>var scene = document.getElementById('scene');
     var parallax = new Parallax(scene);</script>
   <script src="https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js"></script>
+  <script>
+    // 禁止滚动
+    function disableScroll() {
+      // 获取滚动位置
+      var scrollX = window.scrollX || window.pageXOffset;
+      var scrollY = window.scrollY || window.pageYOffset;
+      // 将页面滚动位置重置为初始位置
+      window.onscroll = function () {
+        window.scrollTo(scrollX, scrollY);
+      };
+    }
+
+    // 启用滚动
+    function enableScroll() {
+      window.onscroll = null;
+    }
+
+    // 禁止滑动
+    function disableTouch() {
+      document.addEventListener('touchmove', preventDefault, { passive: false });
+    }
+
+    // 启用滑动
+    function enableTouch() {
+      document.removeEventListener('touchmove', preventDefault);
+    }
+
+    // 阻止默认滑动行为
+    function preventDefault(e) {
+      e.preventDefault();
+    }
+
+    // 禁止滚动
+    disableScroll();
+    // 禁止滑动
+    disableTouch();
+
+    // 启用滚动
+    // enableScroll();
+    // 启用滑动
+    // enableTouch();
+
+  </script>
 </body>
 
 </html>
