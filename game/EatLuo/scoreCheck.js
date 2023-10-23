@@ -31,7 +31,7 @@
     randomIndex = Math.floor(Math.random() * comments[6].length);
     selectedComment = comments[6][randomIndex];
   } else {
-    selectedComment = "&#8203;``【oaicite:0】``&#8203;你自己ban瓜，还是我帮你ban瓜？";
+    selectedComment = "果甲xiu机，你自己ban瓜，还是我帮你ban瓜？";
   }
 
   document.getElementById("demo").innerHTML = selectedComment;
