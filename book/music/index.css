@@ -48,7 +48,7 @@ section {
 }
 
 #img1 {
-    background-image: url('https://www.bing.com//th?id=OHR.CubanTody_ZH-CN8656368705_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp');
+    background-image: url('https://api.paugram.com/bing/');
 }
 
 #img2 {
@@ -74,6 +74,7 @@ section {
 #img7 {
     background-image: url(images/img7.jpg);
 }
+
 .video-player {
     flex-direction: column;
     flex-wrap: wrap;
