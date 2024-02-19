@@ -51,9 +51,9 @@ if ($RankingType == 'all') {
   <meta item="description" content="EatKano" />
   <meta charset="utf-8" />
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.staticfile.net/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
