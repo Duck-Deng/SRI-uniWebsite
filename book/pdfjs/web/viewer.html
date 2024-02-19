@@ -35,6 +35,7 @@ See https://github.com/adobe-type-tools/cmap-resources
   <link rel="stylesheet" href="viewer.css">
 
   <script src="viewer.mjs" type="module"></script>
+
 </head>
 
 <body tabindex="1">
@@ -587,12 +588,12 @@ See https://github.com/adobe-type-tools/cmap-resources
   <div id="printContainer"></div>
 
   <input type="file" id="fileInput" class="hidden">
+  <!-- 将以下代码段放在<script>标签的末尾 -->
   <script>
     if (PDFViewerApplication.preferenceSidebarViewOnLoad === -1) {
       PDFViewerApplication.sidebarToggle.click();
     }
   </script>
-  <!-- 添加以下代码 -->
   <script>
     // 获取 URL 中的参数
     function getParameterByName(name, url) {
@@ -615,7 +616,6 @@ See https://github.com/adobe-type-tools/cmap-resources
       PDFViewerApplication.open(pdfUrlParam);
     }
   </script>
-
 </body>
 
 </html>
